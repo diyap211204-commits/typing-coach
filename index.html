@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Keystroke – typing practice with a report</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<header><h1>Keystroke</h1><span class="tag">Type an exercise, get a report on speed, accuracy and what to practise next.</span></header>
+<aside>
+ <div class="box"><h2>Exercises</h2><div id="lessons"></div></div>
+ <div class="box"><h2>Length</h2><div class="seg" id="len"></div></div>
+ <div class="box"><h2>Your progress</h2><div id="prog" style="font-size:14px;color:var(--mute)">Finish an exercise to start tracking.</div></div>
+</aside>
+<main>
+ <div class="stats">
+  <div class="stat"><small>Accuracy</small><b id="sA">100%</b></div>
+  <div class="stat"><small>Time</small><b id="sT">0:00</b></div>
+  <div class="stat"><small>Mistakes</small><b id="sE">0</b></div>
+ </div>
+ <section class="card" id="play"><div class="bar"><i id="pb"></i></div><div id="text" aria-live="off"></div>
+  <p class="hint">The timer starts with your first key. <kbd>Backspace</kbd> fixes a letter, <kbd>Esc</kbd> restarts. Type on your keyboard or click the on-screen keys (use <kbd>Shift</kbd> for capitals and symbols).</p></section>
+ <section class="card report" id="rep"></section>
+ <div class="kb" id="kb" aria-hidden="true"></div>
+</main>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>
